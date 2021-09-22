@@ -21,6 +21,7 @@ FROM retirement_titles as rt
 ORDER BY rt.emp_no, rt.to_date DESC;
 
 SELECT COUNT(title), title
+INTO retiring_titles
 FROM unique_titles
 GROUP BY title
 ORDER BY count DESC;
